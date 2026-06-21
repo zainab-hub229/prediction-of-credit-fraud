@@ -1,46 +1,53 @@
+
+
 # Credit Card Fraud Detection using Machine Learning
 
 ## Name: Zainab
 
 ## Project Overview
-This project focuses on detecting fraudulent credit card transactions using Machine Learning. 
-The main challenge is handling imbalanced data because fraud transactions are very rare compared to normal transactions.
+This project is based on detecting fraudulent credit card transactions using Machine Learning.
+The main challenge is that fraud transactions are very rare compared to normal transactions, so the project focuses on handling imbalanced data and evaluating models using Precision, Recall, and F1-score.
 
 ## Dataset
-Credit Card Fraud Detection Dataset (Kaggle)
+Dataset: Credit Card Fraud Detection (Kaggle)
 
-- Total Transactions: 284,807
-- Fraud Cases: 492
-- Normal Cases: 284,315
+Dataset contains:
+- 284,807 total transactions
+- 492 fraud transactions
+- 284,315 normal transactions
 
 Features:
 - Time
 - Amount
-- V1 - V28
+- V1 to V28
 
 Target:
 - Class
-  - 0 = Normal
-  - 1 = Fraud
+  - 0 = Normal Transaction
+  - 1 = Fraud Transaction
 
-## Steps Performed
-
-### Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
+Performed:
 - Checked dataset shape
 - Checked columns and data types
 - Checked missing values
-- Visualized fraud vs normal transactions
+- Visualized fraud vs normal transaction distribution
 
-### Preprocessing
-- Applied StandardScaler on Amount and Time
-- Performed train-test split
-- Used stratified splitting
+## Data Preprocessing
+Applied:
+- StandardScaler on Amount and Time columns
+- Train-test split
+- Stratified splitting to maintain class ratio
 
-### Handling Imbalanced Data
-Used class_weight='balanced' to handle fraud and normal transaction imbalance.
+## Handling Imbalanced Data
+Used:
+- class_weight='balanced'
 
-### Machine Learning Models
-Implemented:
+This helps the model learn from rare fraud transactions.
+
+## Machine Learning Models
+
+Implemented models:
 
 1. Logistic Regression
 2. Random Forest Classifier
@@ -49,24 +56,24 @@ Implemented:
 
 Models were evaluated using:
 
+- Confusion Matrix
 - Precision
 - Recall
 - F1-score
-- Confusion Matrix
 - ROC-AUC Curve
-
-Accuracy was not considered the main metric because the dataset is highly imbalanced.
 
 ## Conclusion
 
-Random Forest performed better because it was able to identify fraud transactions more effectively. 
-Recall and F1-score were considered important metrics because detecting fraud cases is the main objective.
+Random Forest performed better because it provided better fraud detection performance.
+Recall and F1-score were considered important because identifying fraud transactions is the main objective.
 
 ## Project Files
 
-- analysis.py → EDA and visualization
-- model.py → Model training and evaluation
-- app.py → Streamlit frontend
+- analysis.py → Data analysis and visualization
+- model.py → Machine learning model training
+- app.py → Streamlit frontend application
 - creditcard.csv → Dataset
 
+## Github Repository
 
+https://github.com/zainab-hub229/Credit-fraud-prediction.git
